@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: rgb(42, 80, 96);
+  background: linear-gradient(0deg, rgb(42, 80, 96) 0%, rgb(17, 35, 42) 100%);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: gray;
+  font-size: 17px;
+  border: none;
+  bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: rgb(49, 160, 252);
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn .imgBtn {
+  width: 25px;
+}
+
+.error {
+  margin: auto;
+  color: white;
+  padding: 20px;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  max-width: 1250px;
+  height: 100vh;
+  margin: auto;
+}
+
+.top {
+  width: 1150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.top .weatherTop {
+  color: white;
+}
+.top div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.top div input {
+  width: 250px;
+  padding: 13px 15px;
+  border-radius: 10px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.663);
+}
+.top div input::-moz-placeholder {
+  color: white;
+}
+.top div input::placeholder {
+  color: white;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.center .in {
+  display: grid;
+  align-items: center;
+  padding: 20px;
+  width: 520px;
+  height: 230px;
+  background-color: rgba(128, 128, 128, 0.288);
+  border-radius: 20px;
+  color: white;
+}
+.center .in .one {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 3px;
+}
+.center .in .one .local {
+  width: 30px;
+}
+.center .in .two {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.center .in .two span {
+  display: grid;
+  align-items: center;
+}
+.center .in .two span h1 {
+  font-size: 50px;
+}
+.center .in .two span p {
+  font-size: 30px;
+}
+.center .in .three {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.center .in .three span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.center .in .three span p {
+  font-size: 18px;
+}
+.center .in .three span img {
+  width: 30px;
+}
+.center .in2 {
+  display: grid;
+  padding: 20px;
+  width: 520px;
+  height: 230px;
+  background-color: rgba(128, 128, 128, 0.288);
+  border-radius: 20px;
+  color: white;
+}
+.center .in2 .Title {
+  font-size: 23px;
+}
+.center .in2 .bottom {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.center .in2 .bottom div:nth-child(1) {
+  display: grid;
+}
+.center .in2 .bottom div:nth-child(1) h1 {
+  font-size: 25px;
+}
+.center .in2 .bottom div:nth-child(1) p {
+  font-size: 15px;
+  color: rgb(169, 162, 162);
+}
+.center .in2 .bottom div:nth-child(1) span span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.center .in2 .bottom div:nth-child(1) span span img {
+  width: 20px;
+}
+.center .in2 .bottom div:nth-child(2) {
+  display: grid;
+  grid-gap: -200px;
+}
+.center .in2 .bottom div:nth-child(2) h1 {
+  font-size: 25px;
+}
+.center .in2 .bottom div:nth-child(2) p {
+  font-size: 15px;
+  color: rgb(169, 162, 162);
+}
+.center .in2 .bottom div:nth-child(2) span span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.center .in2 .bottom div:nth-child(2) span span img {
+  width: 20px;
+}
+
+.Boxthree {
+  display: grid;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.288);
+  padding: 20px;
+  height: 220px;
+  border-radius: 20px;
+}
+.Boxthree .Title {
+  color: white;
+}
+.Boxthree .intwo {
+  width: 100%;
+  height: 75px;
+  background-color: rgba(128, 128, 128, 0.525);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  position: relative;
+}
+.Boxthree .intwo span {
+  position: absolute;
+  width: 100%;
+  height: 75px;
+  background-color: rgb(49, 160, 252);
+  z-index: -1;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+}
+.Boxthree .bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.Boxthree .bottom div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.525);
+  border-radius: 10px;
+  color: white;
+  padding: 12px 0px;
+}
+.Boxthree .bottom div p {
+  margin: auto;
+  color: rgb(211, 206, 206);
+}
+.Boxthree .bottom div h1 {
+  margin: auto;
+  font-size: 22px;
+}/*# sourceMappingURL=App.css.map */
