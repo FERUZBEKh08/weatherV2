@@ -51,11 +51,12 @@ body{
 
 .top{
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     padding: 10px 0px;
     max-width: 1250px;
     .weatherTop{
-        color: white;
+        color: white;  
     }
     div{
         display: flex;
@@ -261,6 +262,7 @@ body{
             display: flex;
             align-items: center;
             justify-content: start;
+            margin-top: 10px;
             input{
                 width: 200px;
             }

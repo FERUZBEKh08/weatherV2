@@ -16,7 +16,7 @@ import visibility from "../src/photos/visibility.png";
 
 export default function App() {
   const [api, setApi] = useState("");
-  const [Cvalue, setCvalue] = useState("");
+  const [Cvalue, setCvalue] = useState("Uzbekistan");
   const [data, setData] = useState(null);
   const [see, setSee] = useState(false);
 
@@ -53,7 +53,16 @@ useEffect(() => {
   }
 }, [data]);
 
-  
+
+useEffect(() => {
+    const shahar = "uzbekistan"
+    const apiKey = "651f4facecfe9d04168b0fe90783eb65";
+    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${shahar}&units=metric&appid=${apiKey}`;
+
+    setApi(apiURL);
+    setSee(true);
+
+}, []);
 
   const city = () => {
     const cityName = Cvalue.toLowerCase();
@@ -79,12 +88,12 @@ const func = (event) => {
       fetch(api)
         .then((response) => response.json())
         .then((data) => {
-          if (data.cod === "404") {
+          if (data.cod === "404" || Cvalue.length <= 0) {
             setError("Shahar topilmadi, qayta urinib ko‘ring!");
-            setData(null); // Ma’lumotni tozalaymiz
+            setData(null);
           } else {
             setData(data);
-            setError(""); // Xatoni tozalaymiz
+            setError("");
             setDates(() => {
               const localTime = new Date(new Date().getTime() + data.timezone * 2400);
               return `${localTime.toLocaleString().slice(0, 9)}`;
@@ -101,7 +110,7 @@ const func = (event) => {
 
 
   const formatTime = (timestamp) => {
-    const date = new Date(timestamp * 1000); // Millisekundga o‘tkazish
+    const date = new Date(timestamp * 1000);
     return date.toLocaleTimeString("uz-UZ", {
       hour: "2-digit",
       minute: "2-digit",
