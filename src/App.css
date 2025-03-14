@@ -5,7 +5,6 @@
 
 body {
   background: rgb(42, 80, 96);
-  background: linear-gradient(0deg, rgb(42, 80, 96) 0%, rgb(17, 35, 42) 100%);
 }
 
 .btn {
@@ -40,20 +39,22 @@ body {
 }
 
 .container {
-  display: grid;
-  align-items: center;
-  justify-content: center;
   max-width: 1250px;
   height: 100vh;
   margin: auto;
+  background: rgb(42, 80, 96);
+}
+
+.Incont {
+  height: 700px;
+  padding: 10px;
 }
 
 .top {
-  width: 1150px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 10px 0px;
+  max-width: 1250px;
 }
 .top .weatherTop {
   color: white;
@@ -61,7 +62,7 @@ body {
 .top div {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   gap: 10px;
 }
 .top div input {
@@ -83,8 +84,10 @@ body {
 
 .center {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0px;
 }
 .center .in {
   display: grid;
@@ -196,6 +199,7 @@ body {
 .Boxthree {
   display: grid;
   align-items: center;
+  grid-gap: 20px;
   background-color: rgba(128, 128, 128, 0.288);
   padding: 20px;
   height: 220px;
@@ -218,10 +222,8 @@ body {
 }
 .Boxthree .intwo span {
   position: absolute;
-  width: 100%;
   height: 75px;
   background-color: rgb(49, 160, 252);
-  z-index: -1;
   border-radius: 10px;
   top: 0;
   left: 0;
@@ -247,4 +249,111 @@ body {
 .Boxthree .bottom div h1 {
   margin: auto;
   font-size: 22px;
+}
+
+@media (max-width: 620px) {
+  .top div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .top div input {
+    width: 200px;
+  }
+}
+@media (max-width: 1163px) {
+  .center .in {
+    width: 450px;
+  }
+  .center .in2 {
+    width: 450px;
+  }
+}
+@media (max-width: 1120px) {
+  .center .in {
+    width: 430px;
+  }
+  .center .in2 {
+    width: 430px;
+  }
+}
+@media (max-width: 982px) {
+  .center .in {
+    width: 400px;
+  }
+  .center .in2 {
+    width: 400px;
+  }
+}
+@media (max-width: 920px) {
+  .center .in {
+    width: 370px;
+  }
+  .center .in2 {
+    width: 370px;
+  }
+}
+@media (max-width: 865px) {
+  .center .in {
+    width: 350px;
+  }
+  .center .in2 {
+    width: 350px;
+  }
+}
+@media (max-width: 822px) {
+  .center .in {
+    width: 320px;
+  }
+  .center .in2 {
+    width: 320px;
+  }
+}
+@media (max-width: 760px) {
+  .center .in {
+    width: 100%;
+  }
+  .center .in2 {
+    width: 100%;
+  }
+}
+@media (max-width: 384px) {
+  .center .in {
+    font-size: 10px;
+  }
+  .center .in .two span h1 {
+    font-size: 30px;
+  }
+  .center .in .two span p {
+    font-size: 20px;
+  }
+  .center .in .three {
+    width: 250px;
+  }
+  .center .in .three span p {
+    font-size: 14px;
+  }
+  .center .in2 .Title {
+    font-size: 17px;
+  }
+  .center .in2 .bottom {
+    gap: 10px;
+  }
+  .center .in2 .bottom div:nth-child(1) h1 {
+    font-size: 20px;
+  }
+  .center .in2 .bottom div:nth-child(1) p {
+    font-size: 10px;
+  }
+  .center .in2 .bottom div:nth-child(2) h1 {
+    font-size: 20px;
+  }
+  .center .in2 .bottom div:nth-child(2) p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 890px) {
+  .Boxthree {
+    height: auto;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -64,11 +64,14 @@ useEffect(() => {
     setSee(true);
     //
     console.log(dates);
-    
-
     //
   };
 
+const func = (event) => {
+  if (event.key === "Enter") {
+      city();
+  }
+}
   useEffect(() => {
     if (api) {
       console.log("API Link:", api);
@@ -108,7 +111,7 @@ useEffect(() => {
 
   return (
     <div className="container">
-
+      <div className="Incont">
       <div className="top">
         <h1 className="weatherTop">Ob Havo</h1>
 
@@ -118,6 +121,7 @@ useEffect(() => {
             type="text"
             placeholder="Shahar nomini kiriting..."
             onChange={(e) => setCvalue(e.target.value)}
+            onKeyDown={func}
           />
           <button onClick={city} className="btn">
             <img className="imgBtn" src={search} alt="" />
@@ -263,6 +267,8 @@ useEffect(() => {
               </div>
         : <p></p>)}
       {error && <p className="error">{error}</p>}
+      </div>
+
 
     </div>
   );

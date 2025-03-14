@@ -4,7 +4,7 @@
 }
 body{
     background: rgb(42,80,96);
-    background: linear-gradient(0deg, rgba(42,80,96,1) 0%, rgba(17,35,42,1) 100%);}
+}
 
 .btn{
     display: flex;
@@ -38,27 +38,29 @@ body{
 }
 
 .container{
-    display: grid;
-    align-items: center;
-    justify-content: center;
     max-width: 1250px;
     height: 100vh;
     margin: auto;
+    background: rgb(42,80,96);
+}
+
+.Incont{
+    height: 700px;
+    padding: 10px;
 }
 
 .top{
-    width: 1150px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     padding: 10px 0px;
+    max-width: 1250px;
     .weatherTop{
         color: white;
     }
     div{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: end;
         gap: 10px;
         input{
             width: 250px;
@@ -78,8 +80,10 @@ body{
 
 .center{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0px;
     .in{
         display: grid;
         align-items: center;
@@ -140,6 +144,7 @@ body{
         background-color: rgba(128, 128, 128, 0.288);
         border-radius: 20px;
         color: white;
+        
         .Title{
             font-size: 23px;
         }
@@ -195,6 +200,7 @@ body{
 .Boxthree{
     display: grid;
     align-items: center;
+    grid-gap: 20px;
     background-color: rgba(128, 128, 128, 0.288);
     padding: 20px;
     height: 220px;
@@ -215,10 +221,8 @@ body{
         position: relative;
         span{
             position: absolute;
-            width: 100%;
             height: 75px;
             background-color: rgb(49, 160, 252) ;
-            z-index: -1;
             border-radius: 10px;
             top: 0;
             left: 0;
@@ -250,6 +254,153 @@ body{
     }
 }
 
+//top
+@media (max-width : 620px) {
+    .top{
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            input{
+                width: 200px;
+            }
+        }
+    }
+}
+
+//center
+@media (max-width : 1163px) {
+    .center{
+        .in{
+            width: 450px;
+        }
+        .in2{
+            width: 450px;
+        }
+    }
+}
+
+@media (max-width : 1120px) {
+    .center{
+        .in{
+            width: 430px;
+        }
+        .in2{
+            width: 430px;
+        }
+    }
+}
+
+@media (max-width : 982px) {
+    .center{
+        .in{
+            width: 400px;
+        }
+        .in2{
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width : 920px) {
+    .center{
+        .in{
+            width: 370px;
+        }
+        .in2{
+            width: 370px;
+        }
+    }
+}
+
+@media (max-width : 865px) {
+    .center{
+        .in{
+            width: 350px;
+        }
+        .in2{
+            width: 350px;
+        }
+    }
+}
 
 
+@media (max-width : 822px) {
+    .center{
+        .in{
+            width: 320px;
+        }
+        .in2{
+            width: 320px;
+        }
+    }
+}
 
+@media (max-width : 760px) {
+    .center{
+        .in{
+            width: 100%;
+        }
+        .in2{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width : 384px) {
+    .center{
+        .in{
+            font-size: 10px;
+            .two{
+                span{
+                    h1{
+                        font-size: 30px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+            .three{
+                width: 250px;
+                span{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .in2{
+            .Title{
+                font-size: 17px;
+            }
+            .bottom{
+                gap: 10px;
+                div:nth-child(1){
+                    h1{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 10px;
+                    }
+                }
+                div:nth-child(2){
+                    h1{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//boxthree
+@media (max-width : 890px) {
+    .Boxthree{
+        height: auto;
+    }
+}
